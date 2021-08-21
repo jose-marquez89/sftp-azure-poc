@@ -1,14 +1,10 @@
 import os
 
-from dotenv import load_dotenv
 import pysftp
 from azure.storage.blob import BlobClient
 
-load_dotenv()
-
-
 CONTAINER_NAME = os.environ["CONTAINER"]
-CONNECTION = os.environ["CONNECTION"]
+CONNECTION = os.environ["AzureWebJobsStorage"]
 HOST_NAME = os.environ["HOST_NAME"]
 USER_NAME = os.environ["USER_NAME"]
 PASSWORD = os.environ["PASSWORD"]
